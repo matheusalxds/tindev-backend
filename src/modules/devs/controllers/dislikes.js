@@ -11,8 +11,6 @@ module.exports = {
     const loggedDev = await Dev.findById(user);
     const targetDev = await Dev.findById(devId);
 
-    console.log('targetDev', targetDev);
-
     if (!targetDev) {
       return res.json({ status: 400, error: 'Dev not exists!' });
     }
